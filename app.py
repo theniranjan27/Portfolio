@@ -21,7 +21,7 @@ projects = db["projects"]
 admin_logs = db["admin_logs"]
 messages = db["messages"]
 
-ADMIN_EMAIL = os.getenv("ADMIN_EMAIL", "")
+ADMIN_EMAIL = os.getenv("ADMIN_EMAIL", "iamniranjanxyz27@gmail.com")
 ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "")
 ADMIN_NAME = os.getenv("ADMIN_NAME", "Niranjan")
 ADMIN_PHONE = os.getenv("ADMIN_PHONE", "+91 7418203404")
@@ -77,6 +77,15 @@ def get_default_projects():
             "image": "/static/images/smartgov.png",
             "status": "Live",
             "created_at": now()
+        },
+        {
+            "title": "EBuy",
+            "description": "A hyperlocal multi-vendor e-commerce marketplace connecting customers, local shops, delivery partners, and administrators on a single real-time platform.",
+            "tech": "Python, Flask, Socket.IO, PostgreSQL",
+            "link": "#",
+            "image": "/static/images/ebuy.jpg",
+            "status": "Live",
+            "created_at": now()
         }
     ]
 
@@ -84,6 +93,17 @@ def get_default_projects():
 def seed_projects():
     if projects.count_documents({}) == 0:
         projects.insert_many(get_default_projects())
+    else:
+        if not projects.find_one({"title": "EBuy"}):
+            projects.insert_one({
+                "title": "EBuy",
+                "description": "A hyperlocal multi-vendor e-commerce marketplace connecting customers, local shops, delivery partners, and administrators on a single real-time platform.",
+                "tech": "Python, Flask, Socket.IO, PostgreSQL",
+                "link": "#",
+                "image": "/static/images/ebuy.jpg",
+                "status": "Live",
+                "created_at": now()
+            })
 
 
 @app.before_request
