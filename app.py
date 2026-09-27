@@ -3,6 +3,7 @@ from pymongo import MongoClient, DESCENDING
 from dotenv import load_dotenv
 from datetime import datetime
 import os
+import json
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -193,14 +194,30 @@ def send_contact_email(name, email, message_text, phone=""):
         if phone:
             payload["phone"] = phone
 
-        data = urllib.parse.urlencode(payload).encode("utf-8")
+        headers = {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+            "Referer": "https://www.niranjann.com/contact",
+            "Origin": "https://www.niranjann.com"
+        }
+        try:
+            if request and hasattr(request, "url") and request.url:
+                headers["Referer"] = request.url
+            if request and hasattr(request, "host_url") and request.host_url:
+                headers["Origin"] = request.host_url.rstrip("/")
+        except Exception:
+            pass
+
+        data = json.dumps(payload).encode("utf-8")
         req = urllib.request.Request(
             f"https://formsubmit.co/ajax/{recipient}",
             data=data,
-            headers={"User-Agent": "Mozilla/5.0"}
+            headers=headers
         )
         with urllib.request.urlopen(req) as resp:
-            print("FormSubmit API response:", resp.read().decode("utf-8"))
+            resp_body = resp.read().decode("utf-8")
+            print("FormSubmit API response:", resp_body)
         return True
     except Exception as e:
         print(f"FormSubmit API request error: {e}")
