@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - InfoHub</title>
+    <title>About - Niranjan</title>
     <link rel="icon" type="image/png" href="../static/images/logo.png">
     <link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -14,7 +14,9 @@
 <body>
 
     <nav class="navbar">
-        <div class="brand"> <span>InfoHub</span>
+        <div class="brand">
+            <span class="brand-title">Niran<span class="blue-text">jan</span></span>
+            <span class="brand-sub">PORTFOLIO</span>
         </div>
 
         <input type="checkbox" id="menu-bar" style="display: none;">
@@ -23,32 +25,13 @@
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="projects.html">Projects</a>
-            <a href="about.html" class="active">About</a>
-            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
+            <a href="blog.html" class="active">Blog</a>
             <a href="contact.html">Contact</a>
-            {% if session.admin %}
-                <a href="/admin/dashboard" class="mobile-action">Dashboard</a>
-                <a href="/logout" class="mobile-action mobile-register-btn">Logout</a>
-            {% elif session.user %}
-                <span class="mobile-action welcome-text">Hello, {{ session.user_name }}</span>
-                <a href="/logout" class="mobile-action mobile-register-btn">Logout</a>
-            {% else %}
-                <a href="login.html" class="mobile-action">Login</a>
-                <a href="register.html" class="mobile-action mobile-register-btn">Register</a>
-            {% endif %}
         </div>
 
         <div class="nav-actions">
-            {% if session.admin %}
-                <a href="/admin/dashboard" class="login-link">Dashboard</a>
-                <a href="/logout" class="register-btn">Logout</a>
-            {% elif session.user %}
-                <span class="welcome-text">Hello, {{ session.user_name }}</span>
-                <a href="/logout" class="register-btn">Logout</a>
-            {% else %}
-                <a href="login.html" class="login-link">Login</a>
-                <a href="register.html" class="register-btn">Register</a>
-            {% endif %}
+            <a href="contact.html" class="register-btn">Get in Touch</a>
         </div>
     </nav>
 
@@ -68,37 +51,95 @@
 
 
     <section class="page-head">
-        <h1>About InfoHub</h1>
-        <p>Building the future through software, AI, and innovation.</p>
+        <h1>Research & Tech Insights</h1>
+        <p>Driving technological innovation through R&D, AI, Emerging Technologies, and Entrepreneurship.</p>
     </section>
 
-    <section class="about-section">
-        <div class="about-image">
-            <img src="../static/images/about.jpg" alt="About InfoHub">
+    <div class="about-new-wrapper">
+
+        <!-- HERO SHOWCASE CARD -->
+        <div class="about-hero-showcase">
+            <div class="about-hero-image-wrap">
+                <img src="../static/images/about.jpg" alt="Technology & R&D Innovation">
+            </div>
+            <div class="about-hero-text-wrap">
+                <span class="about-hero-badge">
+                    <i class="fas fa-microchip"></i>R&D & Engineering
+                </span>
+                <h2>Bridging Deep Technology & Entrepreneurship</h2>
+                <p>
+                    I bridge deep foundational research and development with scalable software engineering and
+                    entrepreneurship. My work explores how computing systems, artificial intelligence, software, and
+                    hardware integrate to solve complex real-world challenges.
+                </p>
+                <p>
+                    Driven by curiosity and systematic problem-solving, I focus on turning experimental research into
+                    tangible, high-performance software products and digital ventures.
+                </p>
+            </div>
         </div>
 
-        <div class="about-content">
-            <h2>My Mission</h2>
-            <p>
-                InfoHub is my personal digital platform where I showcase websites,
-                AI tools, software projects, blogs, and future startup ideas.
-            </p>
+        <!-- 4 CORE PILLARS GRID -->
+        <div class="about-pillars-grid">
+            <div class="about-pillar-card">
+                <div class="about-pillar-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h3>Entrepreneurship</h3>
+                <p>Validating digital opportunities, building prototypes & MVPs, and taking innovative tech products
+                    from concept to launch.</p>
+            </div>
 
-            <h2>What I Do</h2>
+            <div class="about-pillar-card">
+                <div class="about-pillar-icon">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <h3>Research & Development</h3>
+                <p>Conducting in-depth foundational R&D, analytical assessments, and exploratory research into
+                    cutting-edge computing trends.</p>
+            </div>
 
-            <ul>
-                <li>Full-stack web application development</li>
-                <li>AI and machine learning based projects</li>
-                <li>Technology innovation and future-focused projects</li>
-                <li>Portfolio, blog, and project showcase system</li>
-            </ul>
+            <div class="about-pillar-card">
+                <div class="about-pillar-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>AI & Machine Learning</h3>
+                <p>Designing intelligent automation workflows, machine learning models, and smart data-driven software
+                    solutions.</p>
+            </div>
+
+            <div class="about-pillar-card">
+                <div class="about-pillar-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3>Emerging Technologies</h3>
+                <p>Exploring next-generation tech innovations, advanced computing frameworks, and future-forward
+                    technological paradigms.</p>
+            </div>
         </div>
-    </section>
+
+
+        <!-- CALL TO ACTION BANNER -->
+        <div class="about-cta-banner">
+            <h2>Interested in Collaborating or Exploring Research?</h2>
+            <p>Whether you're interested in collaborative research, modern software development, or building innovative
+                tech products, let's connect and discuss.</p>
+            <div class="about-cta-actions">
+                <a href="contact.html" class="btn-solid-primary">
+                    <i class="fas fa-paper-plane"></i> Get in Touch
+                </a>
+                <a href="blog.html" class="btn-outline-secondary">
+                    <i class="fas fa-user"></i> View Profile
+                </a>
+            </div>
+        </div>
+
+    </div>
 
     <footer class="footer">
         <div class="footer-grid">
             <div>
-                <h3>InfoHub</h3>
+                <h3>Niranjan</h3>
                 <p>Building innovative software, AI solutions,
                     and future technology projects while sharing
                     my journey as a developer and entrepreneur.</p>
@@ -115,24 +156,22 @@
             <div>
                 <h3>Resources</h3>
                 <a href="blog.html">Blog</a>
-                <a href="#">Documentation</a>
-                <a href="https://github.com/niranjan-2724/InfoHub">GitHub</a>
-                <a href="#">Portfolio</a>
+                <a href="../static/files/Resume.pdf" target="_blank" download>Resume</a>
             </div>
 
             <div>
                 <h3>Connect</h3>
                 <div class="footer-social">
-                    <a href="https://github.com/niranjan-2724/InfoHub"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/theniranjan27" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://x.com/niranj_27"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/theniranjanz" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/niranjanscb" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
         <div
             style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #334155; font-size: 14px; color: #94a3b8; width: 100%;">
-            <p>&copy; 2025 InfoHub. All Rights Reserved.</p>
+            <p>&copy; 2026 Niranjan. All Rights Reserved.</p>
         </div>
     </footer>
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InfoHub</title>
+    <title>Niranjan | Portfolio</title>
     <link rel="icon" type="image/png" href="../static/images/logo.png">
     <link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -15,7 +15,8 @@
 
     <nav class="navbar">
         <div class="brand">
-            <span>Info<span class="blue-text">Hub</span></span>
+            <span class="brand-title">Niran<span class="blue-text">jan</span></span>
+            <span class="brand-sub">PORTFOLIO</span>
         </div>
 
         <input type="checkbox" id="menu-bar" style="display: none;">
@@ -27,29 +28,10 @@
             <a href="about.html">About</a>
             <a href="blog.html">Blog</a>
             <a href="contact.html">Contact</a>
-            {% if session.admin %}
-            <a href="/admin/dashboard" class="mobile-action">Dashboard</a>
-            <a href="/logout" class="mobile-action mobile-register-btn">Logout</a>
-            {% elif session.user %}
-            <span class="mobile-action welcome-text">Hello, {{ session.user_name }}</span>
-            <a href="/logout" class="mobile-action mobile-register-btn">Logout</a>
-            {% else %}
-            <a href="login.html" class="mobile-action">Login</a>
-            <a href="register.html" class="mobile-action mobile-register-btn">Register</a>
-            {% endif %}
         </div>
 
         <div class="nav-actions">
-            {% if session.admin %}
-            <a href="/admin/dashboard" class="login-link">Dashboard</a>
-            <a href="/logout" class="register-btn">Logout</a>
-            {% elif session.user %}
-            <span class="welcome-text">Hello, {{ session.user_name }}</span>
-            <a href="/logout" class="register-btn">Logout</a>
-            {% else %}
-            <a href="login.html" class="login-link">Login</a>
-            <a href="register.html" class="register-btn">Register</a>
-            {% endif %}
+            <a href="contact.html" class="register-btn">Get in Touch</a>
         </div>
     </nav>
 
@@ -72,15 +54,14 @@
 
             <div class="hero-left">
 
-
-
                 <h1>
-                    Welcome to
-                    <span>InfoHub</span>
+                    Hi, I'm
+                    <span>Niranjan</span>
                 </h1>
 
                 <p>
-                    Showcasing innovative projects, modern web solutions, and future focused technology ideas.
+                    Entrepreneur, Research Analyst & Full Stack Developer specializing in AI & Machine Learning,
+                    Foundational R&D, and Emerging Technologies.
                 </p>
 
                 <div class="hero-line"></div>
@@ -92,13 +73,12 @@
                         Explore Projects
                     </a>
 
-                    <a href="register.html" class="hero-btn secondary-btn">
-                        <i class="fas fa-user-plus"></i>
-                        Get Started
+                    <a href="contact.html" class="hero-btn secondary-btn">
+                        <i class="fas fa-envelope"></i>
+                        Get in Touch
                     </a>
 
                 </div>
-
 
             </div>
 
@@ -108,24 +88,30 @@
     <section class="home-stats-section">
         <div class="hero-stats">
             <div class="stat-box">
-                <i class="fas fa-rocket"></i>
-                <div>
+                <div class="stat-icon-wrapper blue-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <div class="stat-content">
                     <h3>5+</h3>
                     <p>Projects</p>
                 </div>
             </div>
 
             <div class="stat-box">
-                <i class="fas fa-code"></i>
-                <div>
+                <div class="stat-icon-wrapper purple-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="stat-content">
                     <h3>10+</h3>
                     <p>Technologies</p>
                 </div>
             </div>
 
             <div class="stat-box">
-                <i class="fas fa-trophy"></i>
-                <div>
+                <div class="stat-icon-wrapper amber-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <div class="stat-content">
                     <h3>5+</h3>
                     <p>Concepts</p>
                 </div>
@@ -138,59 +124,61 @@
 
         <div class="project-grid">
             <div class="project-card">
-                <img src="../static/images/aitools.webp">
-                <h3>AI Tools Directory</h3>
-                <p>Discover and explore AI tools for productivity, content creation, coding, design, and more in one
-                    place.</p>
-                <small>HTML, CSS, JavaScript</small>
+                <img src="../static/images/smartgov.png" alt="SmartGov">
+                <h3>SmartGov</h3>
+                <p>A comprehensive Government Service Platform providing streamlined civic guidance, digital services,
+                    and career development opportunities.</p>
+                <small>Python, Flask, PostgreSQL</small>
             </div>
 
             <div class="project-card">
-                <img src="../static/images/smartgov.png" alt="Smart GOV">
-                <h3>Smart GOV</h3>
-                <p>A student-focused career development portal that provides guidance,
-                    skill-building resources, and career growth opportunities.</p>
-                <small>Python, Flask, SQLAlchemy</small>
-            </div>
-
-            <div class="project-card">
-                <img src="../static/images/ebuy.jpg" alt="EBuy">
-                <h3>EBuy</h3>
-                <p>A hyperlocal multi-vendor e-commerce marketplace that connects customers, local shops, delivery
-                    partners, and administrators on a single real-time platform for seamless local shopping and
-                    delivery.</p>
+                <img src="../static/images/ebuy.jpg" alt="Nexus Cart">
+                <h3>Nexus Cart</h3>
+                <p>A hyperlocal multi-vendor e-commerce marketplace connecting customers, local shops, and delivery
+                    partners on a real-time platform.</p>
                 <small>Python, Flask, Socket.IO, PostgreSQL</small>
+            </div>
+
+            <div class="project-card">
+                <img src="../static/images/networking.webp" alt="Glonet">
+                <h3>Glonet</h3>
+                <p>An interconnected collaborative networking platform for professionals and researchers to connect,
+                    share
+                    insights, and innovate together.</p>
+                <small>Full Stack, WebSockets, Python</small>
             </div>
         </div>
     </section>
 
     <section class="why-section">
-        <h2>Why Choose InfoHub?</h2>
+        <h2>Core Focus & Expertise</h2>
 
         <div class="why-grid">
             <div class="why-card">
-                <div class="icon-circle">🚀</div>
-                <h3>Project Showcase</h3>
-                <p>Explore my web development, AI, and software projects built with real-world ideas.</p>
+                <div class="icon-circle">💼</div>
+                <h3>Entrepreneurship & Full Stack</h3>
+                <p>Translating research into scalable digital ventures, web systems, and innovative products from
+                    concept to launch.</p>
             </div>
 
             <div class="why-card">
                 <div class="icon-circle">🤖</div>
-                <h3>AI & Technology</h3>
-                <p>Discover my learning journey in artificial intelligence, automation, and modern technologies.</p>
+                <h3>AI & Machine Learning</h3>
+                <p>Developing intelligent systems, automated workflows, and practical machine learning solutions.</p>
             </div>
 
             <div class="why-card">
-                <div class="icon-circle">✨</div>
-                <h3>Innovation Journey</h3>
-                <p>Follow my progress as I build projects, explore ideas, and grow as a developer.</p>
+                <div class="icon-circle">🔬</div>
+                <h3>R&D & Emerging Tech</h3>
+                <p>Conducting foundational technology research and analytical deep-dives into cutting-edge innovations.
+                </p>
             </div>
         </div>
     </section>
     <footer class="footer">
         <div class="footer-grid">
             <div>
-                <h3>InfoHub</h3>
+                <h3>Niranjan</h3>
                 <p>Building innovative software, AI solutions, and future technology projects while sharing my
                     journey
                     as a developer and entrepreneur.</p>
@@ -207,24 +195,22 @@
             <div>
                 <h3>Resources</h3>
                 <a href="blog.html">Blog</a>
-                <a href="#">Documentation</a>
-                <a href="#">GitHub</a>
-                <a href="#">Portfolio</a>
+                <a href="../static/files/Resume.pdf" target="_blank" download>Resume</a>
             </div>
 
             <div>
                 <h3>Connect</h3>
                 <div class="footer-social">
-                    <a href="https://github.com/niranjan-2724/InfoHub"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/theniranjan27" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://x.com/niranj_27"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/theniranjanz" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/niranjanscb" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2025 InfoHub. All Rights Reserved.</p>
+            <p>&copy; 2026 Niranjan. All Rights Reserved.</p>
         </div>
     </footer>
 

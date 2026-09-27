@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - InfoHub</title>
+    <title>Contact - Niranjan</title>
     <link rel="icon" type="image/png" href="../static/images/logo.png">
     <link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -15,7 +15,8 @@
 
     <nav class="navbar">
         <div class="brand">
-            <span>InfoHub</span>
+            <span class="brand-title">Niran<span class="blue-text">jan</span></span>
+            <span class="brand-sub">PORTFOLIO</span>
         </div>
 
         <input type="checkbox" id="menu-bar" style="display: none;">
@@ -27,29 +28,10 @@
             <a href="about.html">About</a>
             <a href="blog.html">Blog</a>
             <a href="contact.html" class="active">Contact</a>
-            {% if session.admin %}
-                <a href="/admin/dashboard" class="mobile-action">Dashboard</a>
-                <a href="/logout" class="mobile-action mobile-register-btn">Logout</a>
-            {% elif session.user %}
-                <span class="mobile-action welcome-text">Hello, {{ session.user_name }}</span>
-                <a href="/logout" class="mobile-action mobile-register-btn">Logout</a>
-            {% else %}
-                <a href="login.html" class="mobile-action">Login</a>
-                <a href="register.html" class="mobile-action mobile-register-btn">Register</a>
-            {% endif %}
         </div>
 
         <div class="nav-actions">
-            {% if session.admin %}
-                <a href="/admin/dashboard" class="login-link">Dashboard</a>
-                <a href="/logout" class="register-btn">Logout</a>
-            {% elif session.user %}
-                <span class="welcome-text">Hello, {{ session.user_name }}</span>
-                <a href="/logout" class="register-btn">Logout</a>
-            {% else %}
-                <a href="login.html" class="login-link">Login</a>
-                <a href="register.html" class="register-btn">Register</a>
-            {% endif %}
+            <a href="contact.html" class="register-btn">Get in Touch</a>
         </div>
     </nav>
 
@@ -78,16 +60,16 @@
         <!-- LEFT SIDE FORM -->
         <div class="message-box">
 
-            <form>
+            <form action="{{ url_for('contact') }}" method="POST">
 
-                <input type="text" placeholder="Your name">
+                <input type="text" name="name" placeholder="Your name" required>
 
-                <input type="email" placeholder="Your email">
+                <input type="email" name="email" placeholder="Your email" required>
 
-                <textarea placeholder="Your message"></textarea>
+                <textarea name="message" placeholder="Your message" required></textarea>
 
                 <button type="submit">
-                    Send Message
+                    <i class="fas fa-paper-plane"></i> Send Message
                 </button>
 
             </form>
@@ -103,12 +85,12 @@
 
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
-                    <span>iamniranjanxyz27@gmail.com</span>
+                    <span>niraaanjaaan@gmail.com</span>
                 </div>
 
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
-                    <span>+91 7418203404</span>
+                    <span>+91 8148716007</span>
                 </div>
 
                 <div class="contact-item">
@@ -124,7 +106,7 @@
 
                 <div class="social-icons">
 
-                    <a href="https://github.com/niranjan-2724" target="_blank">
+                    <a href="https://github.com/theniranjan27" target="_blank">
                         <i class="fab fa-github"></i>
                     </a>
 
@@ -132,11 +114,11 @@
                         <i class="fab fa-linkedin"></i>
                     </a>
 
-                    <a href="https://x.com/niranj_27" target="_blank">
+                    <a href="https://x.com/theniranjanz" target="_blank">
                         <i class="fab fa-x-twitter"></i>
                     </a>
 
-                    <a href="#" target="_blank">
+                    <a href="https://www.instagram.com/niranjanscb" target="_blank">
                         <i class="fab fa-instagram"></i>
                     </a>
 
@@ -151,7 +133,7 @@
     <footer class="footer">
         <div class="footer-grid">
             <div>
-                <h3>InfoHub</h3>
+                <h3>Niranjan</h3>
                 <p>Building innovative software, AI solutions,
                     and future technology projects while sharing
                     my journey as a developer and entrepreneur.</p>
@@ -168,24 +150,22 @@
             <div>
                 <h3>Resources</h3>
                 <a href="blog.html">Blog</a>
-                <a href="#">Documentation</a>
-                <a href="https://github.com/niranjan-2724/InfoHub">GitHub</a>
-                <a href="#">Portfolio</a>
+                <a href="../static/files/Resume.pdf" target="_blank" download>Resume</a>
             </div>
 
             <div>
                 <h3>Connect</h3>
                 <div class="footer-social">
-                    <a href="https://github.com/niranjan-2724/InfoHub"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/theniranjan27" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://x.com/niranj_27"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/theniranjanz" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/niranjanscb" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
         <div
             style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #334155; font-size: 14px; color: #94a3b8; width: 100%;">
-            <p>&copy; 2025 InfoHub. All Rights Reserved.</p>
+            <p>&copy; 2026 Niranjan. All Rights Reserved.</p>
         </div>
     </footer>
 

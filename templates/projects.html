@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - InfoHub</title>
+    <title>Projects - Niranjan</title>
     <link rel="icon" type="image/png" href="../static/images/logo.png">
     <link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -15,7 +15,8 @@
 
     <nav class="navbar">
         <div class="brand">
-            <span>InfoHub</span>
+            <span class="brand-title">Niran<span class="blue-text">jan</span></span>
+            <span class="brand-sub">PORTFOLIO</span>
         </div>
 
         <input type="checkbox" id="menu-bar" style="display: none;">
@@ -27,29 +28,10 @@
             <a href="about.html">About</a>
             <a href="blog.html">Blog</a>
             <a href="contact.html">Contact</a>
-            {% if session.admin %}
-            <a href="/admin/dashboard" class="mobile-action">Dashboard</a>
-            <a href="/logout" class="mobile-action mobile-register-btn">Logout</a>
-            {% elif session.user %}
-            <span class="mobile-action welcome-text">Hello, {{ session.user_name }}</span>
-            <a href="/logout" class="mobile-action mobile-register-btn">Logout</a>
-            {% else %}
-            <a href="login.html" class="mobile-action">Login</a>
-            <a href="register.html" class="mobile-action mobile-register-btn">Register</a>
-            {% endif %}
         </div>
 
         <div class="nav-actions">
-            {% if session.admin %}
-            <a href="/admin/dashboard" class="login-link">Dashboard</a>
-            <a href="/logout" class="register-btn">Logout</a>
-            {% elif session.user %}
-            <span class="welcome-text">Hello, {{ session.user_name }}</span>
-            <a href="/logout" class="register-btn">Logout</a>
-            {% else %}
-            <a href="login.html" class="login-link">Login</a>
-            <a href="register.html" class="register-btn">Register</a>
-            {% endif %}
+            <a href="contact.html" class="register-btn">Get in Touch</a>
         </div>
     </nav>
 
@@ -77,97 +59,85 @@
 
         <div class="project-grid">
 
-            <!-- AI TOOLS -->
-
-            <div class="project-card">
-
-                <img src="../static/images/aitools.webp" alt="AI Tools Directory">
-
-                <h3>AI Tools Directory</h3>
-
-                <p>
-                    Discover and explore AI tools for productivity, content creation, coding, design, and more in one
-                    place.
-                </p>
-
-                <small>HTML, CSS, JavaScript</small>
-
-                <div class="project-footer">
-                    <a href="../static/ai_tools/index.html" class="project-arrow" target="_blank">
-                        <i class="fas fa-arrow-up-right-from-square"></i>
-                    </a>
-                </div>
-
-            </div>
-
-            <!-- NEXUS -->
-
-            <div class="project-card">
-
-                <img src="../static/images/uivalut.png" alt="Nexus UI">
-
-                <h3>Nexus UI</h3>
-
-                <p>
-                    A modern UI library containing ready-made templates and modern frontend components to build pages
-                    faster.
-                </p>
-
-                <small>HTML, CSS, JavaScript</small>
-
-                <div class="project-footer">
-                    <a href="../static/nexus_ui/index.html" class="project-arrow" target="_blank">
-                        <i class="fas fa-arrow-up-right-from-square"></i>
-                    </a>
-                </div>
-
-            </div>
-
             <!-- SMART GOV -->
-
             <div class="project-card">
-
-                <img src="../static/images/smartgov.png" alt="Smart GOV">
-
-                <h3>Smart GOV</h3>
-
+                <img src="../static/images/smartgov.png" alt="SmartGov">
+                <h3>SmartGov</h3>
                 <p>
-                    A student-focused career development portal that provides guidance,
-                    skill-building resources, and career growth opportunities.
+                    A comprehensive Government Service Platform providing streamlined civic guidance, digital services,
+                    and career development opportunities.
                 </p>
-
-                <small>Python, Flask, SQLAlchemy, </small>
-
+                <small>Python, Flask, PostgreSQL</small>
                 <div class="project-footer">
                     <a href="https://smartgov-0mqm.onrender.com" class="project-arrow" target="_blank">
                         <i class="fas fa-arrow-up-right-from-square"></i>
                     </a>
                 </div>
-
             </div>
 
-            <!-- EBUY -->
-
+            <!-- UI LIBRARY -->
             <div class="project-card">
-
-                <img src="../static/images/ebuy.jpg" alt="EBuy">
-
-                <h3>EBuy</h3>
-
+                <img src="../static/images/uivalut.png" alt="UI Library">
+                <h3>UI Library</h3>
                 <p>
-                    A hyperlocal multi-vendor e-commerce marketplace that connects customers, local shops, delivery
-                    partners, and administrators on a single real-time platform for seamless local shopping and
-                    delivery.
+                    A modern UI library and design framework containing ready-made templates and responsive frontend
+                    components to build web applications faster.
                 </p>
-
-                <small>Python, Flask, Socket.IO, PostgreSQL</small>
-
+                <small>HTML, CSS, JavaScript</small>
                 <div class="project-footer">
-                    <a href="#" class="project-arrow" target="_blank">
+                    <a href="../static/nexus_ui/index.html" class="project-arrow" target="_blank">
                         <i class="fas fa-arrow-up-right-from-square"></i>
                     </a>
                 </div>
+            </div>
 
+            <!-- NEXUS CART -->
+            <div class="project-card">
+                <img src="../static/images/ebuy.jpg" alt="Nexus Cart">
+                <h3>Nexus Cart</h3>
+                <p>
+                    A hyperlocal multi-vendor e-commerce marketplace connecting customers, local shops, delivery
+                    partners, and administrators on a single real-time platform.
+                </p>
+                <small>Python, Flask, Socket.IO, PostgreSQL</small>
+                <div class="project-footer">
+                    <a href="#" class="project-arrow">
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- GLONET -->
+            <div class="project-card">
+                <img src="../static/images/networking.webp" alt="Glonet">
+                <h3>Glonet</h3>
+                <p>
+                    An interconnected collaborative networking platform designed for professionals, tech researchers,
+                    and
+                    innovators to connect, share insights, and build together.
+                </p>
+                <small>Full Stack, WebSockets, Python, Real-Time Architecture</small>
+                <div class="project-footer">
+                    <a href="#" class="project-arrow">
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- AI TOOLS DIRECTORY -->
+            <div class="project-card">
+                <img src="../static/images/aitools.webp" alt="AI Tools Directory">
+                <h3>AI Tools Directory</h3>
+                <p>
+                    A comprehensive directory of AI tools arranged in a single unified platform for students, creators,
+                    and developers.
+                </p>
+                <small>HTML, CSS, JavaScript, AI Directory</small>
+                <div class="project-footer">
+                    <a href="../static/ai_tools/index.html" class="project-arrow" target="_blank">
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
             </div>
 
         </div>
@@ -177,7 +147,7 @@
     <footer class="footer">
         <div class="footer-grid">
             <div>
-                <h3>InfoHub</h3>
+                <h3>Niranjan</h3>
                 <p>Building innovative software, AI solutions,
                     and future technology projects while sharing
                     my journey as a developer and entrepreneur.</p>
@@ -194,24 +164,22 @@
             <div>
                 <h3>Resources</h3>
                 <a href="blog.html">Blog</a>
-                <a href="#">Documentation</a>
-                <a href="https://github.com/niranjan-2724/InfoHub">GitHub</a>
-                <a href="#">Portfolio</a>
+                <a href="../static/files/Resume.pdf" target="_blank" download>Resume</a>
             </div>
 
             <div>
                 <h3>Connect</h3>
                 <div class="footer-social">
-                    <a href="https://github.com/niranjan-2724/InfoHub"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/theniranjan27" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://x.com/niranj_27"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/theniranjanz" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/niranjanscb" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
         <div
             style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #334155; font-size: 14px; color: #94a3b8; width: 100%;">
-            <p>&copy; 2025 InfoHub. All Rights Reserved.</p>
+            <p>&copy; 2026 Niranjan. All Rights Reserved.</p>
         </div>
     </footer>
 

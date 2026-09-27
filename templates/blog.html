@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - InfoHub</title>
+    <title>Blog - Niranjan</title>
     <link rel="icon" type="image/png" href="../static/images/logo.png">
     <link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -15,7 +15,8 @@
 
     <nav class="navbar">
         <div class="brand">
-            <span>InfoHub</span>
+            <span class="brand-title">Niran<span class="blue-text">jan</span></span>
+            <span class="brand-sub">PORTFOLIO</span>
         </div>
 
         <input type="checkbox" id="menu-bar" style="display: none;">
@@ -24,32 +25,13 @@
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="projects.html">Projects</a>
-            <a href="about.html">About</a>
-            <a href="blog.html" class="active">Blog</a>
+            <a href="about.html" class="active">About</a>
+            <a href="blog.html">Blog</a>
             <a href="contact.html">Contact</a>
-            {% if session.admin %}
-                <a href="/admin/dashboard" class="mobile-action">Dashboard</a>
-                <a href="/logout" class="mobile-action mobile-register-btn">Logout</a>
-            {% elif session.user %}
-                <span class="mobile-action welcome-text">Hello, {{ session.user_name }}</span>
-                <a href="/logout" class="mobile-action mobile-register-btn">Logout</a>
-            {% else %}
-                <a href="login.html" class="mobile-action">Login</a>
-                <a href="register.html" class="mobile-action mobile-register-btn">Register</a>
-            {% endif %}
         </div>
 
         <div class="nav-actions">
-            {% if session.admin %}
-                <a href="/admin/dashboard" class="login-link">Dashboard</a>
-                <a href="/logout" class="register-btn">Logout</a>
-            {% elif session.user %}
-                <span class="welcome-text">Hello, {{ session.user_name }}</span>
-                <a href="/logout" class="register-btn">Logout</a>
-            {% else %}
-                <a href="login.html" class="login-link">Login</a>
-                <a href="register.html" class="register-btn">Register</a>
-            {% endif %}
+            <a href="contact.html" class="register-btn">Get in Touch</a>
         </div>
     </nav>
 
@@ -73,7 +55,7 @@
                 <img src="../static/images/niranjan.jpg" alt="Niranjan">
             </div>
             <h1>Niranjan C</h1>
-            <p>Software Developer & Technology Enthusiast</p>
+            <p>Technology & R&D Enthusiast</p>
             <a href="../static/files/Resume.pdf" download class="download-resume-btn">
                 <i class="fas fa-download"></i> Download Resume
             </a>
@@ -82,19 +64,23 @@
         <div class="blog-about-content">
             <h2>About Me</h2>
             <p>
-                I am Niranjan C, an Information Technology graduate and passionate software developer with a strong
-                interest in web development, artificial intelligence, and emerging technologies. I enjoy creating modern
-                digital solutions that combine functionality, user experience, and innovation.
+                I am Niranjan C, an Information Technology graduate and technology enthusiast with an interest in
+                software development, artificial intelligence, research and development, and emerging technologies. I
+                enjoy exploring how software, AI, hardware, and computing systems can be combined to create practical
+                and innovative solutions.
             </p>
 
             <p>
-                My ultimate goal is to become a successful entrepreneur and build innovative technology companies
-                focused on Artificial Intelligence, Intelligent Automation, Software Solutions, and Future Computing
-                Systems. I am constantly exploring new technologies, improving my problem-solving abilities, and
-                expanding my technical knowledge. My goal is to build meaningful software solutions, contribute to
-                innovative projects, and grow as a technology professional while helping shape the future through
-                digital innovation.Driven by curiosity and innovation, I aim to create impactful technology solutions
-                that improve lives and contribute to the future of digital transformation.
+                I am continuously developing my skills in research and development, emerging technologies, AI/ML,
+                software development, and technology systems. I am passionate about exploring emerging technologies,
+                developing innovative ideas, and continuously expanding my technical knowledge and problem-solving
+                skills.
+            </p>
+
+            <p>
+                My long-term goal is to contribute to and eventually build technology-driven products and companies
+                focused on AI, software, hardware, and advanced computing. I am driven by curiosity, continuous
+                learning, problem-solving, and the desire to turn ideas into practical technology solutions.
             </p>
         </div>
 
@@ -109,30 +95,32 @@
 
         <div class="detail-card">
             <h3>📞 Contact</h3>
-            <p>Email: iamniranjanxyz27@gmail.com</p>
-            <p>Phone: +91 7418203404</p>
+            <p>Email: niraaanjaaan@gmail.com</p>
+            <p>Phone: +91 8148716007</p>
         </div>
 
         <div class="detail-card">
-            <h3>💻 Skills</h3>
-            <p>Full Stack Development, AI, Machine Learning, Web Development</p>
+            <h3>💻 Core Skills</h3>
+            <p>Entrepreneurship, Research Analyst, AI & Machine Learning, Full Stack Development, R&D & Technology
+                Research — Foundational</p>
         </div>
 
         <div class="detail-card">
-            <h3>🚀 Interests</h3>
-            <p>Entrepreneurship, AI, Software Development, Technology & Business</p>
+            <h3>🚀 Areas of Interest</h3>
+            <p>Entrepreneurship, Artificial Intelligence (AI), Research & Development (R&D), Emerging Technologies</p>
         </div>
 
         <div class="detail-card full-card">
             <h3>🧩 My Projects</h3>
-            <p>Smart GOV Career Development Portal , InfoHub Portfolio Platform</p>
+            <p>SmartGov (Civic Tech & Education), Nexus Cart (Hyperlocal E-Commerce), Glonet (Networking Platform)
+            </p>
         </div>
 
         <div class="detail-card full-card">
             <h3>🌐 My Vision</h3>
             <p>
-                My vision is to build innovative technology solutions focused on software,
-                artificial intelligence, automation, and future digital products.
+                My vision is to bridge deep R&D and foundational technology research with entrepreneurial execution,
+                building high-impact software, artificial intelligence systems, and emerging technology products.
             </p>
         </div>
 
@@ -140,7 +128,7 @@
     <footer class="footer">
         <div class="footer-grid">
             <div>
-                <h3>InfoHub</h3>
+                <h3>Niranjan</h3>
                 <p>Building innovative software, AI solutions,
                     and future technology projects while sharing
                     my journey as a developer and entrepreneur.</p>
@@ -157,24 +145,22 @@
             <div>
                 <h3>Resources</h3>
                 <a href="blog.html">Blog</a>
-                <a href="#">Documentation</a>
-                <a href="https://github.com/niranjan-2724/InfoHub">GitHub</a>
-                <a href="#">Portfolio</a>
+                <a href="../static/files/Resume.pdf" target="_blank" download>Resume</a>
             </div>
 
             <div>
                 <h3>Connect</h3>
                 <div class="footer-social">
-                    <a href="https://github.com/niranjan-2724/InfoHub"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/theniranjan27" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://x.com/niranj_27"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/theniranjanz" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/niranjanscb" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
         <div
             style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #334155; font-size: 14px; color: #94a3b8; width: 100%;">
-            <p>&copy; 2025 InfoHub. All Rights Reserved.</p>
+            <p>&copy; 2026 Niranjan. All Rights Reserved.</p>
         </div>
     </footer>
 

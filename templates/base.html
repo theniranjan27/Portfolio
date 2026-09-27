@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InfoHub</title>
+    <title>Niranjan | Portfolio</title>
     <meta name="description"
-        content="InfoHub is a platform showcasing technology projects, software development work, innovative ideas, and digital solutions created by Niranjan C.">
+        content="Personal portfolio of Niranjan C showcasing technology projects, software development work, innovative ideas, and digital solutions.">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}">
@@ -15,8 +15,11 @@
 <body>
     <nav class="navbar">
         <div class="brand">
-            <img src="{{ url_for('static', filename='images/logo.png') }}" class="logo-img" alt="InfoHub Logo">
-            <span>InfoHub</span>
+            <img src="{{ url_for('static', filename='images/logo.png') }}" class="logo-img" alt="Niranjan Logo">
+            <div>
+                <span class="brand-title">Niran<span class="blue-text">jan</span></span>
+                <span class="brand-sub">PORTFOLIO</span>
+            </div>
         </div>
 
         <div class="nav-links">
@@ -27,17 +30,8 @@
             <a href="/contact">Contact</a>
         </div>
 
-        <div class="nav-actions"> <span></span>
-            </button>
-            {% if session.get('admin') %}
-            <a href="/admin/dashboard" class="login-link">Dashboard</a>
-            <a href="/logout" class="register-btn">Logout</a>
-            {% elif session.get('user') %}
-            <a href="/logout" class="register-btn">Logout</a>
-            {% else %}
-            <a href="/login" class="login-link">Login</a>
-            <a href="/register" class="register-btn">Register</a>
-            {% endif %}
+        <div class="nav-actions">
+            <a href="/contact" class="register-btn">Get in Touch</a>
         </div>
     </nav>
 
@@ -47,7 +41,7 @@
 
     <footer
         style="text-align: center; padding: 30px; background: var(--card); box-shadow: 0 -4px 20px rgba(0,0,0,0.03); color: #64748b; font-weight: 500;">
-        <p>&copy; 2026 InfoHub. Built with passion & AI.</p>
+        <p>&copy; 2026 Niranjan. Built with passion & AI.</p>
     </footer>
 
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
