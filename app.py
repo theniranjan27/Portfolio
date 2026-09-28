@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, send_from_directory
 from pymongo import MongoClient, DESCENDING
 from dotenv import load_dotenv
 from datetime import datetime
@@ -277,6 +277,16 @@ def blog_html():
 @app.route("/contact.html")
 def contact_html():
     return redirect(url_for("contact"))
+
+
+@app.route("/robots.txt")
+def robots():
+    return send_from_directory(app.static_folder, "robots.txt", mimetype="text/plain")
+
+
+@app.route("/sitemap.xml")
+def sitemap():
+    return send_from_directory(app.static_folder, "sitemap.xml", mimetype="application/xml")
 
 
 @app.route("/login")

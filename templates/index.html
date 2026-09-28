@@ -1,14 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Niranjan | Portfolio</title>
-    <link rel="icon" type="image/png" href="../static/images/logo.png">
+    <title>Niranjan C | Entrepreneur, Research Analyst & Full Stack Developer</title>
+    <meta name="description"
+        content="Entrepreneur, Research Analyst & Full Stack Developer specializing in AI & Machine Learning, Foundational R&D, and Emerging Technologies.">
+    <meta name="author" content="Niranjan C">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://niranjann.com/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Niranjan C Portfolio">
+    <meta property="og:url" content="https://niranjann.com/">
+    <meta property="og:title" content="Niranjan C | Entrepreneur, Research Analyst & Full Stack Developer">
+    <meta property="og:description"
+        content="Entrepreneur, Research Analyst & Full Stack Developer specializing in AI & Machine Learning, Foundational R&D, and Emerging Technologies.">
+    <meta property="og:image" content="https://niranjann.com/static/images/infohubmain.png">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@theniranjanz">
+    <meta name="twitter:creator" content="@theniranjanz">
+    <meta name="twitter:title" content="Niranjan C | Entrepreneur, Research Analyst & Full Stack Developer">
+    <meta name="twitter:description"
+        content="Entrepreneur, Research Analyst & Full Stack Developer specializing in AI & Machine Learning, Foundational R&D, and Emerging Technologies.">
+    <meta name="twitter:image" content="https://niranjann.com/static/images/infohubmain.png">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/images/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/images/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../static/images/logo.png">
+
+    <!-- Stylesheets & Fonts -->
     <link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://niranjann.com/#person",
+          "name": "Niranjan C",
+          "jobTitle": "Entrepreneur, Research Analyst & Full Stack Developer",
+          "email": "mailto:niraaanjaaan@gmail.com",
+          "telephone": "+918148716007",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Kanyakumari",
+            "addressRegion": "Tamil Nadu",
+            "addressCountry": "India"
+          },
+          "url": "https://niranjann.com/",
+          "image": "https://niranjann.com/static/images/niranjan.jpg",
+          "sameAs": [
+            "https://github.com/theniranjan27",
+            "https://x.com/theniranjanz",
+            "https://www.instagram.com/niranjanscb"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://niranjann.com/#website",
+          "url": "https://niranjann.com/",
+          "name": "Niranjan C Portfolio",
+          "description": "Personal portfolio of Niranjan C showcasing AI projects, software development work, foundational R&D, and digital solutions.",
+          "publisher": {
+            "@id": "https://niranjann.com/#person"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://niranjann.com/#webpage",
+          "url": "https://niranjann.com/",
+          "name": "Niranjan C | Entrepreneur, Research Analyst & Full Stack Developer",
+          "isPartOf": {
+            "@id": "https://niranjann.com/#website"
+          },
+          "about": {
+            "@id": "https://niranjann.com/#person"
+          },
+          "description": "Entrepreneur, Research Analyst & Full Stack Developer specializing in AI & Machine Learning, Foundational R&D, and Emerging Technologies."
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -23,15 +106,15 @@
         <label for="menu-bar" class="menu-toggle"><i class="fas fa-bars"></i></label>
 
         <div class="nav-links">
-            <a href="index.html" class="active">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="about.html">About</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
+            <a href="/" class="active">Home</a>
+            <a href="/projects">Projects</a>
+            <a href="/about">About</a>
+            <a href="/blog">Blog</a>
+            <a href="/contact">Contact</a>
         </div>
 
         <div class="nav-actions">
-            <a href="contact.html" class="register-btn">Get in Touch</a>
+            <a href="/contact" class="register-btn">Get in Touch</a>
         </div>
     </nav>
 
@@ -68,12 +151,12 @@
 
                 <div class="hero-buttons">
 
-                    <a href="projects.html" class="hero-btn primary-btn">
+                    <a href="/projects" class="hero-btn primary-btn">
                         <i class="fas fa-folder-open"></i>
                         Explore Projects
                     </a>
 
-                    <a href="contact.html" class="hero-btn secondary-btn">
+                    <a href="/contact" class="hero-btn secondary-btn">
                         <i class="fas fa-envelope"></i>
                         Get in Touch
                     </a>
@@ -124,7 +207,7 @@
 
         <div class="project-grid">
             <div class="project-card">
-                <img src="../static/images/smartgov.png" alt="SmartGov">
+                <img src="../static/images/smartgov.png" alt="SmartGov - Government Service Platform" width="600" height="340" loading="lazy">
                 <h3>SmartGov</h3>
                 <p>A comprehensive Government Service Platform providing streamlined civic guidance, digital services,
                     and career development opportunities.</p>
@@ -132,7 +215,7 @@
             </div>
 
             <div class="project-card">
-                <img src="../static/images/ebuy.jpg" alt="Nexus Cart">
+                <img src="../static/images/ebuy.jpg" alt="Nexus Cart - Hyperlocal E-commerce Marketplace" width="600" height="340" loading="lazy">
                 <h3>Nexus Cart</h3>
                 <p>A hyperlocal multi-vendor e-commerce marketplace connecting customers, local shops, and delivery
                     partners on a real-time platform.</p>
@@ -140,7 +223,7 @@
             </div>
 
             <div class="project-card">
-                <img src="../static/images/networking.webp" alt="Glonet">
+                <img src="../static/images/networking.webp" alt="Glonet - Collaborative Networking Platform" width="600" height="340" loading="lazy">
                 <h3>Glonet</h3>
                 <p>An interconnected collaborative networking platform for professionals and researchers to connect,
                     share
@@ -186,15 +269,15 @@
 
             <div>
                 <h3>Quick Links</h3>
-                <a href="index.html">Home</a>
-                <a href="projects.html">Projects</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+                <a href="/">Home</a>
+                <a href="/projects">Projects</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
             </div>
 
             <div>
                 <h3>Resources</h3>
-                <a href="blog.html">Blog</a>
+                <a href="/blog">Blog</a>
                 <a href="../static/files/Resume.pdf" target="_blank" download>Resume</a>
             </div>
 
