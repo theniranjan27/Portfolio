@@ -156,7 +156,7 @@ def send_contact_email(name, email, message_text, phone=""):
     smtp_server = os.getenv("MAIL_SERVER", "smtp.gmail.com")
     smtp_port = int(os.getenv("MAIL_PORT", "465"))
 
-    recipient = "niraaanjaaan@gmail.com"
+    recipient = "theniranjanworkspace@gmail.com"
 
     # 1. Try sending via SMTP if credentials are configured in .env
     if smtp_user and smtp_pass:
@@ -182,7 +182,7 @@ def send_contact_email(name, email, message_text, phone=""):
         except Exception as e:
             print(f"SMTP send failed: {e}")
 
-    # 2. Fallback: FormSubmit API to niraaanjaaan@gmail.com
+    # 2. Fallback: FormSubmit API to theniranjanworkspace@gmail.com
     try:
         payload = {
             "name": name,
@@ -244,7 +244,7 @@ def contact():
             except Exception as e:
                 print(f"Failed to record message: {e}")
 
-        # Send email to niraaanjaaan@gmail.com
+        # Send email to theniranjanworkspace@gmail.com
         send_contact_email(name, email, message_text, phone)
 
         flash("Message sent successfully! Thank you for reaching out.", "success")
